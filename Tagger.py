@@ -22,9 +22,9 @@ tekli_calisan = []
 
 
 
-@client.on(events.NewMessage(pattern="^/start$"))
+@client.on(events.NewMessage(pattern="^/says$"))
 async def start(event):
-  await event.reply("**DeltaSaystaggerbot**\ DeltaSays federasyonuna ait etiket botudur\nKomutlar için =======> /help yazın**",
+  await event.reply("**DeltaSaystaggerbot**\ DeltaSays federasyonuna ait etiket botudur\nKomutlar için =======> /delta yazın**",
                     buttons=(
                         [
                             Button.url('Beni Gruba Ekle ➕', 'https://t.me/DeltaSaystaggerbot?startgroup=a'),
@@ -41,9 +41,9 @@ async def start(event):
                     ),
                     link_preview=False
                    )
-@client.on(events.NewMessage(pattern="^/help$"))
+@client.on(events.NewMessage(pattern="^/delta$"))
 async def help(event):
-  helptext = "** DeltaSaystaggerbot Komutları**\n\n**/tag <sebeb> - 5-li Etiket Atar**\n\n**/etag <sebeb> - Emoji ile etiketler**\n\n**/tektag sebeb - Üyeleri Tek Tek Etiketler**\n\n**/admins sebeb - Yöneticileri Tek Tek Tag Eder**\n\n**/start - botu başlatır**"
+  helptext = "** DeltaSaystaggerbot Komutları**\n\n**/tag <sebeb> - 5-li Etiket Atar**\n\n**/etag <sebeb> - Emoji ile etiketler**\n\n**/tektag sebeb - Üyeleri Tek Tek Etiketler**\n\n**/admins sebeb - Yöneticileri Tek Tek Tag Eder**\n\n**/says - botu başlatır**"
   await event.reply(helptext,
                     buttons=(
                         [
@@ -76,7 +76,7 @@ async def help(event):
 	
 	
 
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+@client.on(events.NewMessage(pattern='^(?i)/iptal'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
@@ -145,7 +145,7 @@ async def mentionall(event):
         usrtxt = ""
 
 
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+@client.on(events.NewMessage(pattern='^(?i)/iptal'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
@@ -210,7 +210,7 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+@client.on(events.NewMessage(pattern='^(?i)/iptal'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
@@ -275,7 +275,7 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+@client.on(events.NewMessage(pattern='^(?i)/iptal'))
 async def cancel(event):
   global tekli_calisan
   tekli_calisan.remove(event.chat_id)
