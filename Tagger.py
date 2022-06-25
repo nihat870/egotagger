@@ -64,7 +64,7 @@ async def help(event):
 	
 @client.on(events.NewMessage(pattern="^/reklam$"))
 async def help(event):
-  helptext = "**DeltaSaystaggerbot:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Tekli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n  **"
+  helptext = "** Reklam & business : @egoyagel   **"
   await event.reply(helptext,
                     buttons=(
                         [
@@ -104,11 +104,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**Geçmiş mesajlar için etiket ede bilmiom**")
+        return await event.respond("**Geçmiş mesajlar için etiket işlemi yapamıyorum**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("Etiket Yapmak için sebeb yok❗️")
   else:
-    return await event.respond("**Etikete Başlamak için sebeb yazın...!**")
+    return await event.respond("**Etikete Başlamak için sebep yazın...!**")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -118,7 +118,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("** Etiket işlemi başarıyla durduruldu❌**")
+        await event.respond("** Etiket işlemi başarıyla durduruldu ❌**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -136,7 +136,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Işlem Başarıyla Durduruldu\n\n**. **❌")
+        await event.respond("Işlem Başarıyla Durduruldu\n\n** **✖❌✖❌✖❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -155,13 +155,13 @@ async def cancel(event):
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("Bu komutu gruplar ve kanallar için geçerli❗️**")
+    return await event.respond("Bu komut gruplar ve kanallar için geçerli❗️**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**Bu komutu sadace yoneticiler kullana bilir〽️**")
+    return await event.respond("**Bu komutu sadace yoneticiler kullanabilir❗**")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -170,11 +170,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("Önceki Mesajlara Cevab Vermeyin")
+        return await event.respond("Önceki Mesajlara Cevap Vermeyin")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("Başlatmak için sebeb yok❗️")
+    return await event.respond("Başlatmak için sebep yok❗️")
   else:
-    return await event.respond("Işleme başlamak için sebeb yok")
+    return await event.respond("Işleme başlamak için sebep yok")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -184,7 +184,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👥 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("Işlem Başarıyla Durduruldu\n\n**. **❌")
+        await event.respond("Işlem Başarıyla Durduruldu\n\n** **✖❌✖❌✖❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -202,7 +202,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👥 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("işlem başarıyla durduruldu❌")
+        await event.respond("işlem başarıyla durduruldu ❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
