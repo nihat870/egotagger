@@ -24,10 +24,10 @@ tekli_calisan = []
  
 @client.on(events.NewMessage(pattern="^/start$")) 
 async def start(event): 
-  await event.reply("🤖GLOBALTAGGER Bot Qrupunuzdakı Demək olar ki, Bütün Üzvləri Tağ Edə Bilərəm Yazın =======> / help üçün yardım **", 
+      await event.reply("🤖MERYEM TAG Bot Qrupunuzdakı Demək olar ki, Bütün Üzvləri Tağ Edə Bilərəm Yazın =======> / help üçün yardım **", 
                     buttons=( 
                     
-        [Button.url('Beni Gruba Ekle ➕', 'https://t.me/GLOBALTAGGER_Bot?startgroup=a')], 
+        [Button.url('Beni Gruba Ekle ➕', 'https://t.me/meryemtag_bot?startgroup=a')], 
                       [Button.url('Support🛠', 'https://t.me/cosmic_vibes_33')], 
                       [Button.url('Resmi Kanal📣', 'https://t.me/Fake_Love_33')], 
         [Button.url('Developer👨🏻‍💻', 'https://t.me/nihat_33')], 
@@ -36,10 +36,10 @@ async def start(event):
                    ) 
 @client.on(events.NewMessage(pattern="^/help$")) 
 async def help(event): 
-  helptext = "🤖 GLOBALTAGGER Bot Əmrləri \n\n/tag <səbəb> - 5-li Tağ edir\n\n/utag <səbəb> - Emoji ile Tağ edir\n\n/tektag səbəb - Userləri Tək Tək Tağ edir\n\n/admins səbəb - adminləri Tək Tək Tağ Edər\n\n/start - botu başladır" 
+  helptext = "🤖 MERYEM TAG Bot Əmrləri \n\n/tag <səbəb> - 5-li Tağ edir\n\n/utag <səbəb> - Emoji ile Tağ edir\n\n/tektag səbəb - Userləri Tək Tək Tağ edir\n\n/admins səbəb - adminləri Tək Tək Tağ Edər\n\n/start - botu başladır" 
   await event.reply(helptext, 
                     buttons=( 
-                      [Button.url('Beni Gruba Ekle➕', 'https://t.me/GLOBALTAGGER_Bot?startgroup=a')], 
+                      [Button.url('Beni Gruba Ekle➕', 'https://t.me/meryemtag_bot?startgroup=a')], 
                       [Button.url('Resmi Grup 👨‍💻', 'https://t.me/cosmic_vibes_33')], 
                       [Button.url('Resmi Kanal🔖', 'https://t.me/Fake_Love_33')], 
         [Button.url('Developer🧑‍🔧', 'https://t.me/nihat_33')], 
@@ -49,10 +49,10 @@ async def help(event):
   
 @client.on(events.NewMessage(pattern="^/reklam$")) 
 async def help(event): 
-  helptext = "Çox funksiyalı Qrup Sahibləri @GLOBALTAGGER_Bot Sizin üçün Tağ Botu Tapmağa Çalışır:\n\n📌 5-tağ\n📌 Emoji stikerləri\n📌 Tək Taq\n📌 Yalnız Adminləri Tağlayın\n📌\n\n Cox Funksiyalı Siz @GLOBALTAGGER_Bot -u qrupunuza admin kimi əlavə edə və asanlıqla üzv ola bilərsiniz, tağlar təyin edə bilərsiniz. " 
+  helptext = "Çox funksiyalı Qrup Sahibləri @meryemtag_bot Sizin üçün Tağ Botu Tapmağa Çalışır:\n\n📌 5-tağ\n📌 Emoji stikerləri\n📌 Tək Taq\n📌 Yalnız Adminləri Tağlayın\n📌\n\n Cox Funksiyalı Siz @GLOBALTAGGER_Bot -u qrupunuza admin kimi əlavə edə və asanlıqla üzv ola bilərsiniz, tağlar təyin edə bilərsiniz. " 
   await event.reply(helptext, 
                     buttons=( 
-                      [Button.url('Botu Gruba Ekle➕', 'https://t.me/GLOBALTAGGER_Bot?startgroup=a')], 
+                      [Button.url('Botu Gruba Ekle➕', 'https://t.me/meryemtag_bot?startgroup=a')], 
                     ), 
                     link_preview=False 
                    ) 
